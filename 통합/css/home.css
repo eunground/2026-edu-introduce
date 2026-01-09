@@ -1,0 +1,338 @@
+:root{
+  --bg1:#0b1020;
+  --bg2:#121a33;
+  --text:#eaf0ff;
+  --muted:#b8c4ff;
+  --glass: rgba(255,255,255,.10);
+  --glass2: rgba(255,255,255,.18);
+  --shadow: rgba(0,0,0,.35);
+}
+
+*{ box-sizing:border-box; }
+body{
+  margin:0;
+  font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Noto Sans KR", sans-serif;
+  color:var(--text);
+  background: radial-gradient(1200px 700px at 20% 10%, #26346b 0%, transparent 55%),
+              radial-gradient(900px 600px at 80% 20%, #2b6a88 0%, transparent 50%),
+              linear-gradient(160deg, var(--bg1), var(--bg2));
+  min-height:100vh;
+}
+
+.hub-header{
+  padding:28px 20px 8px;
+  max-width:1100px;
+  margin:0 auto;
+}
+.hub-header h1{ margin:0; font-size:28px; letter-spacing:-0.4px; }
+.hub-header p{ margin:8px 0 0; color:var(--muted); }
+
+.hub-wrap{
+  max-width:1100px;
+  margin: 0 auto;
+  padding: 18px 20px 40px;
+  display:grid;
+  grid-template-columns: 1.2fr .8fr;
+  gap:20px;
+}
+
+.jar-stage{
+  position:relative;
+  padding: 18px;
+  border-radius: 24px;
+  background: rgba(255,255,255,.06);
+  box-shadow: 0 18px 60px var(--shadow);
+  backdrop-filter: blur(10px);
+  overflow:hidden;
+}
+
+/* =========================
+   Jar (more 3D glass)
+   ========================= */
+.jar{
+  position: relative;
+  width: min(520px, 100%);
+  height: 620px;
+  margin: 10px auto 0;
+  border-radius: 42px 42px 78px 78px;
+
+  /* 유리 몸통 톤: 위는 밝고 아래는 살짝 어둡게 */
+  background:
+    linear-gradient(180deg,
+      rgba(255,255,255,.18) 0%,
+      rgba(255,255,255,.10) 45%,
+      rgba(255,255,255,.06) 100%
+    );
+
+  /* 유리 테두리 두께 + 깊이 */
+  box-shadow:
+    inset 0 0 0 2px rgba(255,255,255,.22),          /* rim */
+    inset 8px 0 18px rgba(255,255,255,.08),         /* left inner glow */
+    inset -10px 0 22px rgba(0,0,0,.20),             /* right inner shade */
+    inset 0 -36px 56px rgba(0,0,0,.22),             /* bottom depth */
+    0 22px 90px rgba(0,0,0,.40);                    /* outer shadow */
+
+  border: 1px solid rgba(255,255,255,.14);
+
+  backdrop-filter: blur(6px);
+  overflow:hidden;
+}
+
+/* 입구(타원 립) + 목 부분 */
+.jar::before{
+  content:"";
+  position:absolute;
+  top: 10px;
+  left:50%;
+  transform:translateX(-50%);
+  width: 74%;
+  height: 26px;
+  border-radius: 50%;
+  background:
+    linear-gradient(180deg,
+      rgba(255,255,255,.30),
+      rgba(255,255,255,.08)
+    );
+  box-shadow:
+    inset 0 3px 7px rgba(255,255,255,.35),
+    inset 0 -3px 7px rgba(0,0,0,.20),
+    0 6px 14px rgba(0,0,0,.20);
+  pointer-events:none;
+}
+
+/* 목/뚜껑 느낌(그림처럼 위쪽 두께감) */
+.jar::after{
+  content:"";
+  position:absolute;
+  top:-18px;
+  left:50%;
+  transform:translateX(-50%);
+  width: 60%;
+  height: 58px;
+  border-radius: 22px 22px 34px 34px;
+  background:
+    linear-gradient(180deg,
+      rgba(255,255,255,.22),
+      rgba(255,255,255,.08)
+    );
+  box-shadow:
+    inset 0 0 0 1px rgba(255,255,255,.22),
+    inset 0 -10px 16px rgba(0,0,0,.22),
+    0 10px 22px rgba(0,0,0,.18);
+  pointer-events:none;
+}
+
+/* 세로 하이라이트(비대칭이 포인트) */
+.jar-gloss{
+  position:absolute;
+  top: 58px;
+  right: 34px;
+  width: 140px;
+  height: 74%;
+  border-radius: 999px;
+  background: linear-gradient(
+    to bottom,
+    rgba(255,255,255,.38),
+    rgba(255,255,255,.10),
+    rgba(255,255,255,0)
+  );
+  transform: rotate(10deg);
+  filter: blur(2px);
+  opacity: .9;
+  pointer-events:none;
+}
+
+/* 얇은 보조 하이라이트(왼쪽) */
+.jar-gloss::after{
+  content:"";
+  position:absolute;
+  left: -46px;
+  top: 36px;
+  width: 64px;
+  height: 64%;
+  border-radius: 999px;
+  background: linear-gradient(
+    to bottom,
+    rgba(255,255,255,.16),
+    rgba(255,255,255,0)
+  );
+  transform: rotate(-10deg);
+  filter: blur(2px);
+  opacity: .55;
+}
+
+/* 내부 영역(구슬 들어가는 공간) */
+.jar-inner{
+  position:absolute;
+  left: 6%;
+  right: 6%;
+  top: 64px;
+  bottom: 86px;
+  border-radius: 30px 30px 62px 62px;
+  overflow:hidden;
+
+  /* 유리 왜곡/질감: 살짝 흐림 + 대비 감소 */
+  background: rgba(0,0,0,.06);
+  backdrop-filter: blur(1.5px);
+}
+
+/* 바닥(두께 + 무게감) */
+.jar-base{
+  position:absolute;
+  left:0;
+  right:0;
+  bottom:0;
+  height: 98px;
+
+  background:
+    radial-gradient(900px 220px at 50% 0%,
+      rgba(255,255,255,.22),
+      rgba(255,255,255,0) 60%
+    ),
+    linear-gradient(180deg,
+      rgba(255,255,255,.06),
+      rgba(0,0,0,.28)
+    );
+
+  box-shadow:
+    inset 0 1px 0 rgba(255,255,255,.18),
+    inset 0 18px 28px rgba(0,0,0,.18);
+
+  border-top: 1px solid rgba(255,255,255,.14);
+}
+
+/* =========================
+   Marbles (more depth)
+   ========================= */
+.marble{
+  position:absolute;
+  width: 62px;
+  height: 62px;
+  border-radius: 50%;
+  cursor:pointer;
+
+  border: 1px solid rgba(255,255,255,.22);
+
+  /* 구슬 자체 입체감(내부 음영 + 외부 그림자) */
+  box-shadow:
+    inset -8px -10px 16px rgba(0,0,0,.26),
+    inset 10px 10px 18px rgba(255,255,255,.30),
+    0 12px 22px rgba(0,0,0,.28);
+
+  filter: saturate(.92);
+
+  transform: translate3d(0, -220px, 0);
+  opacity: 0;
+  animation: drop 900ms cubic-bezier(.2,.9,.2,1) forwards;
+  will-change: transform;
+}
+
+/* 구슬 하이라이트 */
+.marble::before{
+  content:"";
+  position:absolute;
+  inset: 10px auto auto 12px;
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  background: rgba(255,255,255,.58);
+  filter: blur(.2px);
+}
+
+/* 구슬 보조 하이라이트(살짝 길게) */
+.marble::after{
+  content:"";
+  position:absolute;
+  left: 16px;
+  top: 26px;
+  width: 26px;
+  height: 14px;
+  border-radius: 999px;
+  background: rgba(255,255,255,.18);
+  filter: blur(1px);
+  transform: rotate(-18deg);
+  opacity:.75;
+}
+
+/* hover */
+.marble:hover{
+  transform: translate3d(0,0,0) scale(1.08) !important;
+  box-shadow:
+    inset -8px -10px 16px rgba(0,0,0,.26),
+    inset 10px 10px 18px rgba(255,255,255,.34),
+    0 16px 30px rgba(0,0,0,.36);
+}
+
+@keyframes drop{
+  0%   { transform: translate3d(0,-240px,0) scale(.9); opacity:0; }
+  70%  { opacity:1; }
+  100% { transform: translate3d(0,0,0) scale(1); opacity:1; }
+}
+
+.tooltip{
+  position:absolute;
+  padding: 10px 12px;
+  border-radius: 14px;
+  background: rgba(10,14,25,.78);
+  border: 1px solid rgba(255,255,255,.20);
+  color: var(--text);
+  font-size: 14px;
+  pointer-events:none;
+  transform: translate(-50%, -120%);
+  opacity:0;
+  transition: opacity .12s ease, transform .12s ease;
+  white-space: nowrap;
+}
+
+.tooltip.show{
+  opacity:1;
+  transform: translate(-50%, -135%);
+}
+
+.legend{
+  padding: 18px;
+  border-radius: 24px;
+  background: rgba(255,255,255,.06);
+  box-shadow: 0 18px 60px var(--shadow);
+  backdrop-filter: blur(10px);
+}
+
+.legend h2{ margin: 4px 0 10px; font-size: 18px; }
+.student-list{
+  list-style:none;
+  padding:0;
+  margin:0;
+  display:grid;
+  gap:10px;
+}
+.student-list a{
+  display:flex;
+  align-items:center;
+  gap:10px;
+  text-decoration:none;
+  color:var(--text);
+  padding:10px 12px;
+  border-radius: 14px;
+  border: 1px solid rgba(255,255,255,.14);
+  background: rgba(255,255,255,.06);
+  transition: transform .12s ease, background .12s ease;
+}
+.student-list a:hover{
+  transform: translateY(-1px);
+  background: rgba(255,255,255,.10);
+}
+.swatch{
+  width:14px; height:14px; border-radius:50%;
+  border: 1px solid rgba(255,255,255,.25);
+}
+
+.hint{
+  margin-top: 12px;
+  color: var(--muted);
+  font-size: 13px;
+}
+
+@media (max-width: 900px){
+  .hub-wrap{ grid-template-columns: 1fr; }
+  .jar{ height: 560px; }
+}
