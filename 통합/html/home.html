@@ -1,24 +1,33 @@
 <!DOCTYPE html>
 <html lang="ko">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>우리 반 기억 저장소</title>
-  <link rel="stylesheet" href="../css/home.css" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>2026 우리 반 기억 저장소</title>
+  <link rel="stylesheet" href="../css/home.css">
 </head>
 <body>
+  <div class="background-glow"></div>
+
   <header class="hub-header">
-    <h1>우리 반 기억 저장소</h1>
-    <p>구슬을 클릭하면 해당 학생의 페이지로 이동해요.</p>
+    <h1>✨ 2026 우리 반 기억 저장소</h1>
+    <p>구슬을 클릭하면 친구들의 페이지로 이동해요.</p>
   </header>
 
   <main class="hub-wrap">
     <section class="jar-stage">
-      <div class="jar">
-        <div class="jar-gloss"></div>
-        <div class="jar-inner" id="marbleArea"></div>
-        <div class="jar-base"></div>
+      <div class="jar-container">
+        <div class="jar-top"></div>
+        
+        <div class="jar">
+          <div class="jar-reflection"></div>
+          <div class="jar-inner" id="marbleArea"></div>
+          <div class="jar-bottom-reflection"></div>
+        </div>
+        
+        <div class="jar-shadow"></div>
       </div>
+      
       <div class="tooltip" id="tooltip"></div>
     </section>
 
@@ -27,6 +36,10 @@
       <ul id="studentList" class="student-list"></ul>
     </aside>
   </main>
+
+  <footer class="footer">
+    <small>© 2025 부천청소년센터</small>
+  </footer>
 
   <script src="../js/home.js"></script>
 </body>
