@@ -7,7 +7,7 @@ const students = [
   { name: "신정은", url: "../../신정은/html/index.html", color: "#ff9a9e" },
   
   // 예시 데이터 (학생들이 추가되면 여기를 늘려주세요)
-  { name: "김철수", url: "#", color: "#a18cd1" },
+  { name: "홍길동", url: "../../홍길동/html/index.html", color: "#a18cd1" },
   { name: "이영희", url: "#", color: "#fad0c4" },
   { name: "박민수", url: "#", color: "#84fab0" },
   { name: "최유리", url: "#", color: "#fbc2eb" },

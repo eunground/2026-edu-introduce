@@ -1,0 +1,91 @@
+* {
+  
+}
+
+/* 기본 폰트 및 배경 설정 */
+body {
+  font-family: 'Malgun Gothic', sans-serif;
+  margin: 0;
+  background-color: #f9f9f9;
+  box-sizing: border-box;
+}
+
+/* 헤더 스타일 */
+header {
+  background-color: #ff9a9e;
+  color: white;
+  padding: 30px;
+  text-align: center;
+}
+
+/* section과 aside를 감싸는 컨테이너 */
+.container {
+  display: flex;         /* 중요: 가로 배치 시작 */
+  width: 90%;     /* 전체 최대 너비 */
+  margin: 20px auto;     /* 화면 중앙 정렬 */
+  gap: 20px;             /* section과 aside 사이 간격 */
+  padding: 0 20px;
+}
+
+section, article, aside {
+  background: white;
+  padding: 20px;         /* 첫 번째 예시와 동일한 패딩 */
+  border-radius: 10px;   /* 첫 번째 예시와 동일한 둥근 모서리 */
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1); /* 첫 번째 예시와 동일한 얇은 그림자 */
+}
+
+/* 메인 콘텐츠 크기 비율 */
+section, article {
+  line-height: 1.6;
+  margin-bottom: 20px;
+}
+
+/* 사이드바 크기 비율 */
+aside {
+  width: 200px;
+  height: fit-content;   /* 내용물 높이만큼만 */
+  text-align: center;    /* 사이드바 내용은 중앙 정렬 */
+}
+
+/* 사이드바 안의 메뉴 스타일 */
+aside nav {
+  display: flex;
+  flex-direction: column; /* 메뉴를 세로로 정렬 */
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+aside a {
+  text-decoration: none;
+  color: #333;
+  background-color: #f0f0f0;
+  padding: 10px;
+  border-radius: 8px;
+  transition: 0.3s;       /* 부드러운 효과 */
+}
+
+aside a:hover {
+  background-color: #ff9a9e;
+  color: white;
+}
+
+aside ul {
+  text-align: left;       /* 목록은 왼쪽 정렬 */
+  color: #555;
+  padding-left: 30px;
+}
+
+
+footer {
+  text-align: center;
+  padding: 30px;
+  color: #888;
+  font-size: 12px;
+}
+
+/* (선택사항) 모바일 화면 대응: 화면이 좁아지면 세로로 배치 */
+@media (max-width: 600px) {
+  .container {
+    flex-direction: column; /* 세로 배치로 변경 */
+  }
+}

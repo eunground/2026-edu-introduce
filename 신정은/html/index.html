@@ -1,67 +1,44 @@
 <!DOCTYPE html>
-<html lang="ko">
+<html>
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>학생 페이지 - 계절 정원</title>
-  <link rel="stylesheet" href="../css/index.css" />
+  <meta charset="utf-8">
+  <title>나의 소개</title>
+  <link rel="stylesheet" href="../css/index.css">
 </head>
 <body>
-  <header class="topbar">
-    <a class="back" href="../../통합/html/home.html">← 통합 페이지</a>
-    <h1 class="title">나의 계절 정원</h1>
-    <p class="sub">계절 버튼을 눌러 활동 사진을 확인해요.</p>
+
+  <header>
+    <h1>신정은의 페이지</h1>
+    <p>반갑습니다! 저의 2026년을 소개합니다.</p>
   </header>
-  <main class="layout">
-    <!-- 정원/나무 영역 -->
-    <section class="garden" aria-label="계절 나무">
-      <div class="sky">
-        <div class="sun"></div>
-        <div class="cloud c1"></div>
-        <div class="cloud c2"></div>
-      </div>
 
-      <div class="ground"></div>
+  <nav>
+    <a href="spring.html">🌸 봄</a>
+    <a href="summer.html">🌿 여름</a>
+    <a href="autumn.html">🍁 가을</a>
+    <a href="winter.html">☃️ 겨울</a>
+  </nav>
 
-      <div class="tree" id="tree">
-        <div class="trunk"></div>
-        <div class="crown">
-          <!-- 잎/꽃/열매: JS로 계절별 클래스를 바꿔서 분위기 변경 -->
-          <span class="leaf l1"></span>
-          <span class="leaf l2"></span>
-          <span class="leaf l3"></span>
-          <span class="leaf l4"></span>
-          <span class="leaf l5"></span>
-          <span class="leaf l6"></span>
-        </div>
-      </div>
-
-      <div class="birds">❀</div>
+  <main>
+    <section>
+      <h2>자기소개</h2>
+      <img src="../images/자기소개.jpeg" alt="띵동 강아지" class="profile-img"> 
+      <p>안녕하세요. 저는 여러분과 방학 기간에 함께 하게 된 신정은입니다.</p>
+      <p>저는 카페 투어를 좋아해요 </br>
+        여행다니는 것도 좋아해서 작년에는 해외여행을 3번 갔답니다~</br>
+        짧은 시간이지만 잘 지내봐요!!
+      </p>
     </section>
-
-    <!-- 컨트롤 + 사진 -->
-    <section class="panel" aria-label="계절 선택 및 사진">
-      <div class="season-buttons" role="tablist" aria-label="계절 선택">
-        <button class="season-btn active" data-season="spring" role="tab">봄</button>
-        <button class="season-btn" data-season="summer" role="tab">여름</button>
-        <button class="season-btn" data-season="autumn" role="tab">가을</button>
-        <button class="season-btn" data-season="winter" role="tab">겨울</button>
-      </div>
-
-      <div class="caption">
-        <h2 id="seasonTitle">봄</h2>
-        <p id="seasonDesc">새학기, 새 친구, 새로운 시작!</p>
-      </div>
-
-      <div class="gallery" id="gallery" aria-label="활동 사진 갤러리">
-        <!-- 아래 img 경로는 각자 폴더 구조에 맞게 바꾸기 -->
-        <img src="images/spring1.jpg" alt="봄 활동 사진 1" />
-        <img src="images/spring2.jpg" alt="봄 활동 사진 2" />
-        <img src="images/spring3.jpg" alt="봄 활동 사진 3" />
-        <img src="images/spring4.jpg" alt="봄 활동 사진 4" />
-      </div>
-    </section>
+    
+    <article>
+      <h2>나의 목표</h2>
+      <p>이번 방학 동안 학생들과 즐거운 추억을 많이 만들고 싶어요.</p>
+    </article>
   </main>
+
+  <footer>
+    <a href="../../통합/html/home.html" class="home-btn">← 반 전체 페이지로</a>
+  </footer>
 
 </body>
 </html>
