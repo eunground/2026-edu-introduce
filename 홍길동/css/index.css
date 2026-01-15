@@ -39,7 +39,7 @@ section, article {
 /* 사이드바 크기 비율 */
 aside {
   width: 200px;
-  height: fit-content;   /* 내용물 높이만큼만 */
+  height: 100%;   /* 내용물 높이만큼만 */
   text-align: center;    /* 사이드바 내용은 중앙 정렬 */
 }
 
