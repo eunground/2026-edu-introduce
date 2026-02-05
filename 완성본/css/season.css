@@ -1,0 +1,183 @@
+/* 1. 기본 설정 */
+body {
+  margin: 0;
+  background-color: #f9f9f9;
+  font-family: 'Malgun Gothic', sans-serif; /* 'Malgun Gothic'  sans-serif  serif 중 선택 */
+  text-align: center; /* 전체 글자를 가운데 정렬 */
+}
+
+/* 2. 헤더 꾸미기 (봄 느낌) */
+header {
+  background-color: #ff9a9e; /* 분홍색 배경 */
+  color: white;
+  padding: 30px;
+}
+
+header a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+/* 3. 갤러리 배치 (가장 중요!) */
+section {
+  display: flex;         /* 가로로 배치하기 */
+  justify-content: center; /* 가운데 모으기 */
+  gap: 20px;             /* 사진 사이 간격 */
+  padding: 30px;
+  flex-wrap: wrap;       /* 화면이 좁으면 다음 줄로 내리기 */
+}
+
+/* 4. 사진 카드 (div) 꾸미기 */
+section div {
+  background-color: white; /* 사진 배경 */
+  padding: 10px;
+  width: 250px;          /* 카드의 너비 고정 */
+  border: 1px solid #ddd; /* 테두리 살짝 */
+  transition: transform 0.3s;
+}
+
+section div:hover {
+  transform: scale(1.05); /* 크기 1.05배 확대 */
+}
+
+/* 사진 크기 맞추기 */
+section img {
+  width: 100%;           /* 카드 너비에 꽉 차게 */
+  height: 200px;         /* 높이 고정 (선택 사항) */
+  object-fit: cover;     /* 사진 찌그러지지 않게 자르기 */
+}
+
+/* 5. 푸터 꾸미기 */
+footer {
+  padding: 20px;
+  color: #888;
+}
+
+footer a {
+  color: #555;
+  text-decoration: none;
+}
+
+/* --- 기존 코드 아래에 붙여넣기 --- */
+/* 6. 모달(확대 창) 스타일 */
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1000;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.8);
+  justify-content: center;
+  align-items: center;
+}
+
+.modal-content {
+  max-width: 90%;
+  max-height: 90%;
+  border: 4px solid white;
+  border-radius: 10px;
+  box-shadow: 0 0 20px rgba(0,0,0,0.5);
+  animation: zoom 0.3s;
+}
+
+.close {
+  position: absolute;
+  top: 20px;
+  right: 40px;
+  color: #fff;
+  font-size: 50px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.close:hover {
+  color: #ff9a9e;
+}
+
+@keyframes zoom {
+  from {transform: scale(0.5); opacity: 0;} 
+  to {transform: scale(1); opacity: 1;}
+}
+
+/* 7. 방명록 스타일 (점 제거 포함) */
+.guestbook-section {
+  width: 100%;
+  max-width: 600px;
+  margin: 50px auto; /* 중앙 정렬 */
+  padding: 20px;
+  background-color: white;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+}
+
+.guestbook-form {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 20px;
+  justify-content: center;
+}
+
+.guestbook-form input {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+#nameInput { width: 20%; }
+#commentInput { width: 60%; }
+
+#addBtn {
+  width: 15%;
+  background-color: #ff9a9e;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+#addBtn:hover { background-color: #ff7e83; }
+
+/* ★★★ 여기가 점을 없애는 핵심 코드입니다 ★★★ */
+#commentList {
+  list-style: none; /* 점 없애기 */
+  padding: 0;       /* 왼쪽 들여쓰기 없애기 */
+  margin: 0;
+  text-align: left; /* 글자는 왼쪽 정렬 (원하면 center로 변경) */
+}
+
+#commentList li {
+  background-color: #fff0f1;
+  margin-bottom: 10px;
+  padding: 10px;
+  border-radius: 5px;
+  border-bottom: 1px solid #eee;
+  display: flex;
+  justify-content: space-between; /* 내용과 삭제버튼 양쪽 끝으로 */
+  align-items: center;
+}
+
+#commentList span.name {
+  font-weight: bold;
+  color: #555;
+  margin-right: 10px;
+}
+
+/* 삭제 버튼 스타일 */
+.delete-btn {
+  margin-left: 10px;
+  color: red;
+  cursor: pointer;
+  font-size: 0.8em;
+  border: 1px solid red;
+  border-radius: 4px;
+  padding: 2px 5px;
+  background: white;
+}
+
+.delete-btn:hover {
+  background: #ffebeb;
+}
