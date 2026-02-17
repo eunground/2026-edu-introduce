@@ -170,3 +170,39 @@ body {
 .footer {
     text-align: center;
 }
+
+/* =========================================
+   반응형 (Responsive) 추가
+========================================= */
+@media (max-width: 768px) {
+  .hub-header h1 { 
+    font-size: 1.5rem; /* 모바일에서는 제목 크기 축소 */
+  }
+  
+  .hub-wrap {
+    flex-direction: column; /* 가로 배열에서 세로 배열로 변경 */
+    gap: 20px;
+    padding: 10px;
+  }
+
+  /* 유리병 크기 축소 */
+  .jar-stage {
+    width: 90vw; 
+    max-width: 320px;
+    height: 55vh;
+    max-height: 450px;
+  }
+
+  /* 학생 목록 크기 및 높이 조정 */
+  .legend {
+    width: 90vw;
+    max-width: 320px;
+    max-height: 250px;
+  }
+
+  /* 모바일 환경 구슬 크기 축소 */
+  .marble {
+    width: 45px; 
+    height: 45px;
+  }
+}

@@ -5,15 +5,25 @@
 const students = [
   // name: 학생 이름, url: 이동할 경로, color: 구슬 색상
   { name: "신정은", url: "../../신정은/html/index.html", color: "#ff9a9e" },
-  
-  // 예시 데이터 (학생들이 추가되면 여기를 늘려주세요)
   { name: "홍길동", url: "../../홍길동/html/index.html", color: "#a18cd1" },
   { name: "완성본", url: "../../완성본/html/index.html", color: "#fad0c4" },
-  { name: "김민수", url: "#", color: "#84fab0" },
-  { name: "최유리", url: "#", color: "#fbc2eb" },
-  { name: "정다은", url: "#", color: "#4facfe" },
-  { name: "강동원", url: "#", color: "#ffecd2" },
-  { name: "박명수", url: "#", color: "#b6a6e9" }
+  // 예시 데이터 (학생들이 추가되면 여기를 늘려주세요)
+  { name: "김시우", url: "#", color: "#84fab0" },
+  { name: "김요한", url: "#", color: "#fbc2eb" },
+  { name: "김은률", url: "#", color: "#4facfe" },
+  { name: "김정건", url: "#", color: "#ffecd2" },
+  { name: "김준서", url: "#", color: "#b6a6e9" },
+  { name: "박지원", url: "#", color: "#b6a6e9" },
+  { name: "오우빈", url: "#", color: "#b6a6e9" },
+  { name: "우주원", url: "#", color: "#b6a6e9" },
+  { name: "윤동유", url: "#", color: "#b6a6e9" },
+  { name: "이민재", url: "#", color: "#b6a6e9" },
+  { name: "이유주", url: "#", color: "#b6a6e9" },
+  { name: "임지완", url: "#", color: "#b6a6e9" },
+  { name: "장준희", url: "#", color: "#b6a6e9" },
+  { name: "차수한", url: "#", color: "#b6a6e9" },
+  { name: "차요한", url: "#", color: "#b6a6e9" },
+  { name: "최규현", url: "#", color: "#b6a6e9" }
 ];
 
 const marbleArea = document.getElementById("marbleArea");
@@ -23,7 +33,7 @@ const studentList = document.getElementById("studentList");
 function clamp(n, min, max){ return Math.max(min, Math.min(max, n)); }
 
 function renderList() {
-  if(!studentList) return; // 에러 방지용 안전장치
+  if(!studentList) return; // 에러 방지
   studentList.innerHTML = "";
   students.forEach(s => {
     const li = document.createElement("li");
