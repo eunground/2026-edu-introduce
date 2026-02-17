@@ -3,11 +3,11 @@
  */
 
 const students = [
-  // name: 학생 이름, url: 이동할 경로, color: 구슬 색상
+  // name: 학생 이름, url: 경로, color: 구슬 색상
   { name: "신정은", url: "../../신정은/html/index.html", color: "#ff9a9e" },
   { name: "홍길동", url: "../../홍길동/html/index.html", color: "#a18cd1" },
   { name: "완성본", url: "../../완성본/html/index.html", color: "#fad0c4" },
-  // 예시 데이터 (학생들이 추가되면 여기를 늘려주세요)
+  // 데이터 더미 (학생들 추가)
   { name: "김시우", url: "#", color: "#84fab0" },
   { name: "김요한", url: "#", color: "#fbc2eb" },
   { name: "김은률", url: "#", color: "#4facfe" },
@@ -65,7 +65,7 @@ function placeMarbles() {
     marble.className = "marble";
     marble.setAttribute("aria-label", `${s.name} 페이지로 이동`);
     
-    // 선생님 코드의 그라데이션 로직 그대로 적용
+    // 그라데이션 로직 적용
     marble.style.background = `radial-gradient(circle at 30% 30%, rgba(255,255,255,.55), rgba(255,255,255,0) 35%),
                                radial-gradient(circle at 55% 65%, rgba(0,0,0,.25), rgba(0,0,0,0) 55%),
                                ${s.color}`;
