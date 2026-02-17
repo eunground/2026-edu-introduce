@@ -1,7 +1,3 @@
-/**
- * 통합 페이지: 유리병 + 구슬
- */
-
 const students = [
   // name: 학생 이름, url: 경로, color: 구슬 색상
   { name: "신정은", url: "../../신정은/html/index.html", color: "#ff9a9e" },
