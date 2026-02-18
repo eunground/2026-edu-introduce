@@ -1,0 +1,44 @@
+/* 1. 전체 기본 설정 */
+body {
+  margin: 0;
+  background-color: ;
+}
+
+/* 2. 헤더(머리말) 꾸미기 */
+header {
+  background-color: ;
+  color: ;
+  padding: 30px;
+  text-align: ;
+}
+
+/* 3. 레이아웃 배치 (중요: 옆으로 나란히 놓기) */
+.container {
+  display: flex;        /* flex를 쓰면 자식 요소들이 가로로 배치됩니다 */
+  width: 90%;           /* 전체 너비의 90%만 사용 */
+  margin: 20px auto;    /* 화면 가운데 정렬 */
+  gap: 20px;            /* 왼쪽과 오른쪽 사이 간격 */
+}
+
+/* 4. 왼쪽 사이드바 (내 정보) */
+aside {
+  width: ;         /* 너비는 180px ~ 220px에서 자유롭게! */
+  background: ;  /* 해당 위치에 배경색을 설정해보기 */
+  padding: 20px;        /* 박스 속성: 여백 설정 해보기 */
+  text-align: center;   /* 해당 위치에 글자 가운데 정렬해보기 */
+  border-radius: 10px;  /* 박스 모서리를 둥글게 하고 싶다면? 선택 사항 */
+}
+
+/* 사이드바 안의 이미지, 선택 */
+aside img {
+  width: %;          /* aside 너비(가로)가 꽉 차게 */
+  border-radius: %;   /* 동그란 사진 만들기 */
+}
+
+/* 사이드바 메뉴 (nav) */
+aside nav {
+  display: flex;          /* 가로 배치 */
+  flex-direction: column; /* 메뉴를 위에서 아래로 세로 배치 */
+  gap: ;              /* 메뉴 사이 간격: 10px ~ 20px에서 자유롭게! */
+  margin-top: 20px;       /* 위 쪽 간격만 조절 */
+}

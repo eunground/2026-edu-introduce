@@ -101,3 +101,83 @@ footer a {
   from {transform: scale(0.5); opacity: 0;} 
   to {transform: scale(1); opacity: 1;}
 }
+
+/* 7. 방명록 스타일 (점 제거 포함) */
+.guestbook-section {
+  width: 100%;
+  max-width: 600px;
+  margin: 50px auto; /* 중앙 정렬 */
+  padding: 20px;
+  background-color: white;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+}
+
+.guestbook-form {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 20px;
+  justify-content: center;
+}
+
+.guestbook-form input {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+#nameInput { width: 20%; }
+#commentInput { width: 60%; }
+
+#addBtn {
+  width: 15%;
+  background-color: #ff9a9e;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+#addBtn:hover { background-color: #ff7e83; }
+
+/* ★★★ 여기가 점을 없애는 핵심 코드입니다 ★★★ */
+#commentList {
+  list-style: none; /* 점 없애기 */
+  padding: 0;       /* 왼쪽 들여쓰기 없애기 */
+  margin: 0;
+  text-align: left; /* 글자는 왼쪽 정렬 (원하면 center로 변경) */
+}
+
+#commentList li {
+  background-color: #fff0f1;
+  margin-bottom: 10px;
+  padding: 10px;
+  border-radius: 5px;
+  border-bottom: 1px solid #eee;
+  display: flex;
+  justify-content: space-between; /* 내용과 삭제버튼 양쪽 끝으로 */
+  align-items: center;
+}
+
+#commentList span.name {
+  font-weight: bold;
+  color: #555;
+  margin-right: 10px;
+}
+
+/* 삭제 버튼 스타일 */
+.delete-btn {
+  margin-left: 10px;
+  color: red;
+  cursor: pointer;
+  font-size: 0.8em;
+  border: 1px solid red;
+  border-radius: 4px;
+  padding: 2px 5px;
+  background: white;
+}
+
+.delete-btn:hover {
+  background: #ffebeb;
+}

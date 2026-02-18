@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="ko">
+
+<head>
+    <meta charset="utf-8" />
+    <title>봄 활동</title>
+    <link rel="stylesheet" href="../css/season.css">
+</head>
+
+<body>
+
+    <header>
+        <a href="./index.html">← 내 페이지로</a>
+        <h1>봄 활동</h1>
+        <p>봄에 진행한 활동 사진을 모아봤어요.</p>
+    </header>
+
+    <main>
+        <section>
+            <div>
+                <img src="../images/봄1.jpg" alt="활동 사진 1" class="gallery-img">
+                <p>친구들과 도쿄 여행</p>
+            </div>
+
+            <div>
+                <img src="../images/봄2.jpg" alt="활동 사진 2" class="gallery-img">
+                <p>후지산!!</p>
+            </div>
+
+            <div>
+                <img src="../images/봄3.jpg" alt="활동 사진 3" class="gallery-img">
+                <p>짱구 전시관에서 빵 쟁탈전</p>
+            </div>
+        </section>
+
+        <div class="guestbook-section">
+            <h3>🌸 추억 남기기</h3>
+            <div class="guestbook-form">
+                <input type="text" id="nameInput" placeholder="이름">
+                <input type="text" id="commentInput" placeholder="내용을 입력하세요">
+                <button id="addBtn">등록</button>
+            </div>
+            <ul id="commentList">
+                </ul>
+        </div>
+    </main>
+
+    <footer>
+        <a href="../../통합/html/home.html">반 전체 페이지로</a>
+    </footer>
+
+    <div id="imageModal" class="modal">
+        <span class="close">&times;</span>
+        <img class="modal-content" id="fullImage">
+    </div>
+
+    <script src="../js/spring.js"></script>
+
+</body>
+
+</html>

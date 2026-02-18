@@ -1,0 +1,39 @@
+/* 메뉴 링크 스타일 */
+aside nav a {
+  text-decoration: ;    /* 밑줄 없애기 */
+  color: ;    /* 글자색 */
+  background-color: ;    /* 배경색 */
+  padding: 10px;
+}
+
+/* 마우스 올렸을 때 색상 변경, 선택 사항 */
+aside nav a:hover {
+  background-color: ;   /* 배경색 */
+  color: ;    /* 글자색 */
+}
+
+/* 5. 오른쪽 메인 콘텐츠 */
+main {
+  flex: 1;    /* 남은 공간을 꽉 채우기 */
+}
+
+/* 본문 박스들 공통 스타일 */
+section,article {
+  background: ;   /* 자기소개 네모 상자 배경색 */
+  padding: 20px;
+  margin-bottom: px;    /* 박스들 사이 간격 */
+  border-radius: px;    /* 박스 둥글게 */
+}
+
+/* 6. 푸터 */
+footer {
+  text-align: ; /* 글자 가운데 정렬 */
+  padding: 30px;
+  color: #888;
+}
+
+footer a {
+  text-decoration: ;    /* 밑줄 없애기 */
+  color: #555;     /* 글자색 */
+  font-weight: bold;
+}

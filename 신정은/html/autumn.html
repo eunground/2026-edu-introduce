@@ -1,37 +1,104 @@
 <!doctype html>
 <html lang="ko">
+
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>신정은 - 가을</title>
-  <link rel="stylesheet" href="../css/season.css" />
+    <meta charset="utf-8" />
+    <title>봄 활동</title>
+    <link rel="stylesheet" href="../css/season.css">
+    <style>
+        section div img {
+            cursor: pointer;
+        }
+    </style>
 </head>
+
 <body>
-  <header class="page-header">
-    <a class="nav" href="./index.html">← 학생 메인</a>
-    <h1>가을 활동</h1>
-    <p>가을에 진행한 활동 사진을 모아봤어요.</p>
-  </header>
 
-  <main class="content">
-    <section class="gallery">
-      <figure class="photo">
-        <img src="../images/summer-1.jpg" alt="여름 활동 사진 1" />
-        <figcaption>가을 활동 1</figcaption>
-      </figure>
-      <figure class="photo">
-        <img src="../images/summer-2.jpg" alt="여름 활동 사진 2" />
-        <figcaption>가을 활동 2</figcaption>
-      </figure>
-      <figure class="photo">
-        <img src="../images/summer-3.jpg" alt="여름 활동 사진 3" />
-        <figcaption>가을 활동 3</figcaption>
-      </figure>
-    </section>
-  </main>
+    <header>
+        <a href="./index.html">← 내 페이지로</a>
+        <h1>봄 활동</h1>
+        <p>봄에 진행한 활동 사진을 모아봤어요.</p>
+    </header>
 
-  <footer class="footer">
-    <a class="nav" href="../../통합/html/home.html">반 전체 페이지로</a>
-  </footer>
+    <main>
+        <section>
+            <div>
+                <img src="../images/봄1.jpg" alt="가마쿠라 사진" class="gallery-img">
+                <p>친구들과 도쿄 여행</p>
+            </div>
+
+            <div>
+                <img src="../images/봄2.jpg" alt="후지산 사진" class="gallery-img">
+                <p>후지산보다 유명한 후지산 앞 편의점 ㅋ</p>
+            </div>
+
+            <div>
+                <img src="../images/봄3.jpg" alt="짱구 전시관" class="gallery-img">
+                <p>빵은 내꺼야!!!!</p>
+            </div>
+
+            <div>
+                <img src="../images/봄4.jpg" alt="도라에몽" class="gallery-img">
+                <p>이제는 산울림 친구들이 더 귀엽다❤️</p>
+            </div>
+
+            <div>
+                <img src="../images/봄5.jpg" alt="딸기시루" class="gallery-img">
+                <p>성심당의 인기는 설에도 끝이 없고~</p>
+            </div>
+
+            <div>
+                <img src="../images/봄6.jpg" alt="캠프" class="gallery-img">
+                <p>생각이 짧았다. 아이들이랑 더 놀아볼 걸...</p>
+            </div>
+
+            <div>
+                <img src="../images/봄7.jpg" alt="경도" class="gallery-img">
+                <p>떡잎마을 방범대같은 아이들. 밥 먹었는데도 잘 뛴다!!</p>
+            </div>
+
+        </section>
+    </main>
+
+    <footer>
+        <a href="../../통합/html/home.html">반 전체 페이지로</a>
+    </footer>
+
+    <div id="imageModal" class="modal">
+        <span class="close">&times;</span>
+        <img class="modal-content" id="fullImage">
+    </div>
+
+    <script>
+        // 1. 필요한 요소들을 가져옵니다.
+        const modal = document.getElementById('imageModal');
+        const modalImg = document.getElementById('fullImage');
+        const closeBtn = document.getElementsByClassName("close")[0];
+
+        // 2. 모든 갤러리 이미지를 선택합니다.
+        const images = document.querySelectorAll('.gallery-img');
+
+        // 3. 각 이미지를 클릭했을 때 할 일을 정합니다.
+        images.forEach(img => {
+            img.addEventListener('click', function () {
+                modal.style.display = "flex"; // 모달 창을 보여줌
+                modalImg.src = this.src;      // 클릭한 사진의 주소를 큰 사진에 넣음
+            });
+        });
+
+        // 4. X 버튼을 누르면 창을 닫습니다.
+        closeBtn.onclick = function () {
+            modal.style.display = "none";
+        }
+
+        // 5. 사진 바깥 검은 배경을 눌러도 닫히게 합니다.
+        modal.onclick = function (event) {
+            if (event.target === modal) {
+                modal.style.display = "none";
+            }
+        }
+    </script>
+
 </body>
+
 </html>
