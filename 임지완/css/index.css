@@ -60,7 +60,7 @@ aside {
   /* 메뉴 요소들을 세로 배치 */
   gap: 10px;
   /* 메뉴 사이 간격: 10px ~ 20px에서 자유롭게! */
-  margin-top: 20px;
+  margin-top: 0px;
   /* 위 쪽 간격만 조절: 20px ~ 30px에서 자유롭게! */
 }
 
