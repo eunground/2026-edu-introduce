@@ -1,0 +1,152 @@
+/* 0. 전체 기본 설정 */
+body {
+  margin: 0;
+  background-color: #b2d7e8; /* (전체) 배경색 설정하기 */
+}
+
+/* 1. 헤더(제목) 꾸미기 */
+header {
+  background-color: #6aa6e6;/* (헤더) 배경색 설정하기 */
+  color: #272164;/* (헤더) 글꼴색 설정하기 */
+  padding: 30px; /* 박스 속성: 여백 설정 */
+  text-align: center; /* 텍스트 스타일: 텍스트 정렬 */
+}
+
+/* 2. 레이아웃 배치, 클래스 선택자 사용 (중요: 옆으로 나란히 놓기) */
+.container {
+  display: flex; /* flex를 쓰면 자식 요소들이 가로로 배치됩니다 */
+  width: 90%; /* 전체 너비의 90%만 사용 */
+  margin: 20px auto; /* 화면 가운데 정렬 */
+  gap: 20px; /* 왼쪽과 오른쪽 사이 간격 */
+}
+
+/* 3. 왼쪽 사이드바 (내 정보) */
+aside {
+  width: 200px;/* 너비는 180px ~ 220px에서 자유롭게! */
+  background: #6aa6e6;/* 해당 위치에 배경색을 설정해보기 */
+  padding: 20px;/* 박스 속성: 여백 설정 해보기 */
+  text-align: center;/* 해당 위치에 글자 가운데 정렬해보기 */
+  border-radius: 10px;/* 박스 모서리를 둥글게 하고 싶다면? 선택 사항 */
+  color: #272164;
+  /* 박스 테두리를 설정하고 싶다면? 선택 사항 */
+}
+
+/* 3-1. 사이드바 안의 이미지 */
+ aside img{
+ width: 100%; /* aside 너비(가로)가 꽉 차게 */
+ border-radius: 50%; /* 동그란 사진 만들기 */
+}
+
+/* 4. 사이드바 메뉴 (nav) */
+ aside nav{
+  display: flex; /* 가로 배치 */
+  flex-direction: column; /* 메뉴 요소들을 세로 배치 */
+  gap: 10;/* 메뉴 사이 간격: 10px ~ 20px에서 자유롭게! */
+  margin-top: 20px;/* 위 쪽 간격만 조절: 20px ~ 30px에서 자유롭게! */
+}
+
+/* 메뉴 링크 스타일 */
+aside nav a {
+  text-decoration: none;    /* 밑줄 없애기 */
+  color: #b2d7e8;    /* 글자색 */
+  background-color: #6aa6e6;    /* 배경색 */
+  padding: 10px;
+}
+
+/* 마우스 올렸을 때 색상 변경, 선택 사항 */
+aside nav a:hover {
+  background-color: #b2d7e8;   /* 배경색 */
+  color: #6aa6e6;    /* 글자색 */
+}
+
+/* 5. 오른쪽 메인 콘텐츠 */
+main {
+  flex: 1;    /* 남은 공간을 꽉 채우기 */
+}
+
+/* 본문 박스들 공통 스타일 */
+section,article {
+  background: #6aa6e6;   /* 자기소개 네모 상자 배경색 */
+  padding: 20px;
+  margin-bottom: 10px;    /* 박스들 사이 간격 */
+  border-radius: 10px;    /* 박스 둥글게 */
+  color: #272164;
+}
+
+/* 6. 푸터 */
+footer {
+  text-align: center; /* 글자 가운데 정렬 */
+  padding: 30px;
+  color: #205a99;
+}
+
+footer a {
+  text-decoration: none;    /* 밑줄 없애기 */
+  color: #14559b;     /* 글자색 */
+  font-weight: bold;
+}
+
+/* =========================================
+   7. 모바일(핸드폰) 최종 수정: 간격 통일 버전
+   ========================================= */
+@media (max-width: 768px) {
+
+  header {
+    padding: 10px;           /* 기존 30px -> 10px로 줄임 */
+    font-size: 14px;         /* 헤더 기본 글자 크기 축소 */
+  }
+
+  /* 1. 전체 컨테이너: 가로 배치 유지 + 간격 통일 */
+  .container {
+    flex-direction: row;     /* 가로 배치 */
+    width: 100%;             /* 너비 꽉 차게 */
+    padding: 10px;           /* [통일] 전체 테두리 여백 10px */
+    gap: 10px;               /* [통일] 사이드바와 본문 사이 간격 10px */
+    box-sizing: border-box;
+  }
+
+  /* 2. 사이드바 (왼쪽) */
+  aside {
+    flex: 0 0 75px;          /* 너비 75px 고정 */
+    padding: 10px;           /* [통일] 사이드바 내부 여백 10px */
+    text-align: center;
+    border-radius: 5px;
+  }
+  
+  /* 사이드바 텍스트 (이름, 소개 등) */
+  aside h2, aside p {        /* (수정) aside 전체가 아니라 텍스트에만 적용 */
+    font-size: 10px;
+    margin: 5px 0;           /* [통일] 텍스트 위아래 간격 5px */
+  }
+
+  /* 메뉴 버튼 스타일 */
+  aside nav a {
+    font-size: 10px;
+    padding: 5px 0;          /* [통일] 버튼 내부 여백 5px */
+    white-space: nowrap;     /* 줄바꿈 방지 */
+    display: block;
+    width: 100%;
+  }
+
+  /* 3. 본문 (오른쪽) */
+  main, section, article {
+    flex: 1;                 /* 남은 공간 차지 */
+  }
+
+  /* 본문 박스 스타일 */
+  section, article {
+    padding: 10px;           /* [통일] 본문 내부 여백 10px */
+    border-radius: 5px;
+  }
+
+  /* 본문 글자 크기 조정 */
+  section, article {
+    font-size: 14px;
+    margin-top: 0;
+  }
+  
+  section, article {
+    font-size: 11px;
+    line-height: 1.4;
+  }
+}

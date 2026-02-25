@@ -1,0 +1,114 @@
+<!doctype html>
+<html lang="ko">
+
+<head>
+    <meta charset="utf-8" />
+    <title>1분기 활동</title>
+    <link rel="stylesheet" href="../css/season.css">
+    <style>
+        section div img {
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <a href="./index.html">← 내 페이지로</a>
+        <h1>1분기 활동</h1>
+        <p>1분기에 진행한 활동 사진을 모아봤어요.</p>
+    </header>
+
+    <main>
+        <section>
+            <div>
+                <img src="../images/봄1.jpg" alt="가마쿠라 사진" class="gallery-img">
+                <p>코딩하는 나와 친구들</p>
+            </div>
+
+            <div>
+                <img src="../images/봄4.jpg" alt="후지산 사진" class="gallery-img">
+                <p>요한이를 도와주는 나</p>
+            </div>
+
+            <div>
+                <img src="../images/봄3.jpg" alt="짱구 전시관" class="gallery-img">
+                <p>코딩하는 친구들</p>
+            </div>
+
+            <div>
+                <img src="../images/봄4.jpg" alt="도라에몽" class="gallery-img">
+                <p>설명듣는 나</p>
+            </div>
+
+            <div>
+                <img src="../images/봄5.jpg" alt="딸기시루" class="gallery-img">
+                <p>농구하는 애들 물론 나보다 못함 ㅋ</p>
+            </div>
+
+            <div>
+                <img src="../images/봄6.jpg" alt="캠프" class="gallery-img">
+                <p>코딩에서 어려움을 겪는나</p>
+            </div>
+
+            <div>
+                <img src="../images/봄7.jpg" alt="경도" class="gallery-img">
+                <p>수한이를 발라버리는 나</p>
+            </div>
+
+            <div>
+                <img src="../images/봄8.jpg" alt="코딩" class="gallery-img">
+                <p>축구하는 나 축구도잘함</p>
+            </div>
+
+            <div>
+                <img src="../images/봄9.jpg" alt="코딩" class="gallery-img">
+                <p>코딩마지막 시간</p>
+            </div>
+
+        </section>
+    </main>
+
+    <footer>
+        <a href="../../통합/html/home.html">반 전체 페이지로</a>
+    </footer>
+
+    <div id="imageModal" class="modal">
+        <span class="close">&times;</span>
+        <img class="modal-content" id="fullImage">
+    </div>
+
+    <script>
+        // 1. 필요한 요소들을 가져옵니다.
+        const modal = document.getElementById('imageModal');
+        const modalImg = document.getElementById('fullImage');
+        const closeBtn = document.getElementsByClassName("close")[0];
+
+        // 2. 모든 갤러리 이미지를 선택합니다.
+        const images = document.querySelectorAll('.gallery-img');
+
+        // 3. 각 이미지를 클릭했을 때 할 일을 정합니다.
+        images.forEach(img => {
+            img.addEventListener('click', function () {
+                modal.style.display = "flex"; // 모달 창을 보여줌
+                modalImg.src = this.src;      // 클릭한 사진의 주소를 큰 사진에 넣음
+            });
+        });
+
+        // 4. X 버튼을 누르면 창을 닫습니다.
+        closeBtn.onclick = function () {
+            modal.style.display = "none";
+        }
+
+        // 5. 사진 바깥 검은 배경을 눌러도 닫히게 합니다.
+        modal.onclick = function (event) {
+            if (event.target === modal) {
+                modal.style.display = "none";
+            }
+        }
+    </script>
+
+</body>
+
+</html>

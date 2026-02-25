@@ -1,0 +1,116 @@
+<!doctype html>
+<html lang="ko">
+
+<head>
+    <meta charset="utf-8" />
+    <title>1분기 활동</title>
+    <!--외부 스타일 시트 연결하기 (season.css 파일)-->
+    <link rel="stylesheet" href="../css/season.css">
+    <style>
+        section div img {
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <a href="./index.html">← 내 페이지로</a>
+        <h1>1분기 활동</h1>
+        <p>1분기에 진행한 활동 사진을 모아봤어요.</p> <!--내용 자유롭게 바꿔도 됩니다-->
+    </header>
+
+    <main>
+        <section>
+            <div>
+                <img src="../images/20260211_152538.jpg" alt="활동 사진 1" class="gallery-img">
+                <!--alt는 사진 설명 (화면에는 안 보임)-->
+                <p>캠프 단체사진</p> <!--사진 한 줄 설명-->
+            </div>
+
+            <div>
+                <img src="../images/20260211_161015.jpg" alt="활동 사진 2" class="gallery-img">
+                <p>캠프 돌리기 체험</p>
+            </div>
+
+            <div>
+                <img src="../images/20260212_192310.jpg" alt="활동 사진 3" class="gallery-img">
+                <p>서로 알아가는 거</p>
+            </div>
+            <div>
+                <img src="../images/KakaoTalk_20260204_160305245_07.jpg" alt="활동 사진 1" class="gallery-img">
+                <!--alt는 사진 설명 (화면에는 안 보임)-->
+                <p>난타</p> <!--사진 한 줄 설명-->
+            </div>
+
+            <div>
+                <img src="../images/1771993675477.jpg" alt="활동 사진 1" class="gallery-img">
+                <!--alt는 사진 설명 (화면에는 안 보임)-->
+                <p>방탈출 설명 듣고있음</p> <!--사진 한 줄 설명-->
+            </div>
+            <div>
+                <img src="../images/1771993696443.jpg" alt="활동 사진 1" class="gallery-img">
+                <!--alt는 사진 설명 (화면에는 안 보임)-->
+                <p>방탈출 단체 사진</p> <!--사진 한 줄 설명-->
+            </div>
+            <div>
+                <img src="../images/KakaoTalk_20260123_153001931.jpg" alt="활동 사진 1" class="gallery-img">
+                <!--alt는 사진 설명 (화면에는 안 보임)-->
+                <p>코딩하고있는 사진</p> <!--사진 한 줄 설명-->
+            </div>
+            <div>
+                <img src="../images/KakaoTalk_20260126_162138225_04.jpg" alt="활동 사진 1" class="gallery-img">
+                <!--alt는 사진 설명 _15253(화면에는 안 보임)-->
+                <p>체육</p> <!--사진 한 줄 설명-->
+            </div>
+            <div>
+                <img src="../images/KakaoTalk_20260126_162138225_05.jpg" alt="활동 사진 1" class="gallery-img">
+                <!--alt는 사진 설명 (화면에는 안 보임)-->
+                <p>체육2</p> <!--사진 한 줄 설명-->
+            </div>
+            <div>
+                <img src="../images/KakaoTalk_20260127_170356334_13.jpg" alt="활동 사진 1" class="gallery-img">
+                <!--alt는 사진 설명 (화면에는 안 보임)-->
+                <p>역량 활동</p> <!--사진 한 줄 설명-->
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <a href="../../통합/html/home.html">반 전체 페이지로</a>
+    </footer>
+
+    <div id="imageModal" class="modal">
+        <span class="close">&times;</span>
+        <img class="modal-content" id="fullImage">
+    </div>
+
+    <script>
+        const modal = document.getElementById('imageModal');
+        const modalImg = document.getElementById('fullImage');
+        const closeBtn = document.getElementsByClassName("close")[0];
+
+        const images = document.querySelectorAll('.gallery-img');
+
+        images.forEach(img => {
+            img.addEventListener('click', function () {
+                modal.style.display = "flex";
+                modalImg.src = this.src;
+            });
+        });
+
+        closeBtn.onclick = function () {
+            modal.style.display = "none";
+        }
+
+        modal.onclick = function (event) {
+            if (event.target === modal) {
+                modal.style.display = "none";
+            }
+        }
+    </script>
+
+</body>
+
+</html>

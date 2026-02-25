@@ -1,0 +1,139 @@
+<!doctype html>
+<html lang="ko">
+
+<head>
+    <meta charset="utf-8" />
+    <title>1분기 활동</title>
+    <!--외부 스타일 시트 연결하기 (season.css 파일)-->
+    <link rel="stylesheet" href="../css/season.css">
+    <style>
+        section div img {
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <a href="./index.html">← 내 페이지로</a>
+        <h1>1분기 활동</h1>
+        <p>1분기에 진행한 활동 사진을 모아봤어요.</p>  <!--내용 자유롭게 바꿔도 됩니다-->
+    </header>
+
+    <main>
+        <section>
+            <div>
+                <img src="../images/봄1.jpg" alt="활동 사진 1" class="gallery-img"> <!--alt는 사진 설명 (화면에는 안 보임)-->
+                <p>자연인</p> <!--사진 한 줄 설명-->
+            </div>
+
+            <div>
+                <img src="../images/봄2.jpg" alt="활동 사진 2" class="gallery-img">
+                <p>섹시 도발</p>
+            </div>
+
+            <div>
+                <img src="../images/봄3.jpg" alt="활동 사진 3" class="gallery-img">
+                <p>체육선생님 얼짱</p>
+            </div>
+            
+            <div>
+                <img src="../images/봄4.jpg" alt="활동 사진 4" class="gallery-img"> <!--alt는 사진 설명 (화면에는 안 보임)-->
+                <p>마이크 먹방</p> <!--사진 한 줄 설명-->
+            </div>
+             
+            <diV>
+                <img src="../images/봄5.jpg" alt="활동 사진 1" class="gallery-img"> <!--alt는 사진 설명 (화면에는 안 보임)-->
+                <p>산울림의 에스파</p> <!--사진 한 줄 설명-->
+            </div> 
+            
+            <div>
+                <img src="../images/봄6.jpg" alt="활동 사진 1" class="gallery-img"> <!--alt는 사진 설명 (화면에는 안 보임)-->
+                <p>겨드랑이 냄새 공격</p> <!--사진 한 줄 설명-->
+            </div> 
+            
+            <div>
+                <img src="../images/봄7.jpg" alt="활동 사진 1" class="gallery-img"> <!--alt는 사진 설명 (화면에는 안 보임)-->
+                <p>재미있다</p> <!--사진 한 줄 설명-->
+            </div> 
+            
+            <div>
+                <img src="../images/봄8.jpg" alt="활동 사진 1" class="gallery-img"> <!--alt는 사진 설명 (화면에는 안 보임)-->
+                <p>와우</p> <!--사진 한 줄 설명-->
+            </div>
+            
+            <div>
+                <img src="../images/봄9.jpg" alt="활동 사진 1" class="gallery-img"> <!--alt는 사진 설명 (화면에는 안 보임)-->
+                <p>비행기를 든 진격의 거인</p> <!--사진 한 줄 설명-->
+            </div>
+            
+            <div>
+                <img src="../images/봄10.jpg" alt="활동 사진 1" class="gallery-img"> <!--alt는 사진 설명 (화면에는 안 보임)-->
+                <p>파워 레인저</p> <!--사진 한 줄 설명-->
+            </div>
+            
+            <div>
+                <img src="../images/봄11.jpg" alt="활동 사진 1" class="gallery-img"> <!--alt는 사진 설명 (화면에는 안 보임)-->
+                <p>회전하는 물체 그리고 공전</p> <!--사진 한 줄 설명-->
+            </div>
+            
+            <div>
+                <img src="../images/봄12.jpg" alt="활동 사진 1" class="gallery-img"> <!--alt는 사진 설명 (화면에는 안 보임)-->
+                <p>슈퍼 소닉</p> <!--사진 한 줄 설명-->
+            </div>
+            
+            <div>
+                <img src="../images/봄13.jpg" alt="활동 사진 1" class="gallery-img"> <!--alt는 사진 설명 (화면에는 안 보임)-->
+                <p>정윤선생님이 바꾸라 했는데 귀찮다</p> <!--사진 한 줄 설명-->
+            </div>
+            
+            <div>
+                <img src="../images/봄14.jpg" alt="활동 사진 1" class="gallery-img"> <!--alt는 사진 설명 (화면에는 안 보임)-->
+                <p>규현앙</p> <!--사진 한 줄 설명-->
+            </div>
+            
+            <div>
+                <img src="../images/봄15.jpg" alt="활동 사진 1" class="gallery-img"> <!--alt는 사진 설명 (화면에는 안 보임)-->
+                <p>치명적이게 고기 먹기</p> <!--사진 한 줄 설명-->
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <a href="../../통합/html/home.html">반 전체 페이지로</a>
+    </footer>
+
+    <div id="imageModal" class="modal">
+        <span class="close">&times;</span>
+        <img class="modal-content" id="fullImage">
+    </div>
+
+    <script>
+        const modal = document.getElementById('imageModal');
+        const modalImg = document.getElementById('fullImage');
+        const closeBtn = document.getElementsByClassName("close")[0];
+        
+        const images = document.querySelectorAll('.gallery-img');
+
+        images.forEach(img => {
+            img.addEventListener('click', function() {
+                modal.style.display = "flex";
+                modalImg.src = this.src;
+            });
+        });
+
+        closeBtn.onclick = function() {
+            modal.style.display = "none";
+        }
+
+        modal.onclick = function(event) {
+            if (event.target === modal) {
+                modal.style.display = "none";
+            }
+        }
+    </script>
+
+</body>
+
+</html>

@@ -4,22 +4,22 @@ const students = [
   { name: "홍길동", url: "../../홍길동/html/index.html", color: "#a18cd1" },
   { name: "완성본", url: "../../완성본/html/index.html", color: "#fad0c4" },
   // 데이터 더미 (학생들 추가)
-  { name: "김시우", url: "#", color: "#84fab0" },
+  { name: "김시우", url: "../../김시우/html/index.html", color: "#ff00ae" },
   { name: "김요한", url: "#", color: "#fbc2eb" },
-  { name: "김은률", url: "#", color: "#4facfe" },
+  { name: "김은률", url: "../../김은률/html/spring.html", color: "#7c14e4" },
   { name: "김정건", url: "#", color: "#ffecd2" },
-  { name: "김준서", url: "#", color: "#b6a6e9" },
+  { name: "김준서", url: "../../김준서/html/index.html", color: "#2de3ff" },
   { name: "박지원", url: "#", color: "#b6a6e9" },
-  { name: "오우빈", url: "#", color: "#b6a6e9" },
-  { name: "우주원", url: "#", color: "#b6a6e9" },
-  { name: "윤동유", url: "#", color: "#b6a6e9" },
-  { name: "이민재", url: "#", color: "#b6a6e9" },
-  { name: "이유주", url: "#", color: "#b6a6e9" },
-  { name: "임지완", url: "#", color: "#b6a6e9" },
-  { name: "장준희", url: "#", color: "#b6a6e9" },
-  { name: "차수한", url: "#", color: "#b6a6e9" },
-  { name: "차요한", url: "#", color: "#b6a6e9" },
-  { name: "최규현", url: "#", color: "#b6a6e9" }
+  { name: "오우빈", url: "../../오우빈/html/index.html", color: "#6aa6e6" },
+  { name: "우주원", url: "../../윤동유/html/index.html", color: "#ffffff" },
+  { name: "윤동유", url: "../../윤동유/html/index.html", color: "#ffffff" },
+  { name: "이민재", url: "../../이민재/html/index.html", color: "#a3f708" },
+  { name: "이유주", url: "../../이유주/html/index.html", color: "#862622" },
+  { name: "임지완", url: "../../임지완/html/index.html", color: "#00ff2a" },
+  { name: "장준희", url: "../../장준희/html/index.html", color: "#bd2a2a" },
+  { name: "차수한", url: "../../차수한/html/index.html", color: "#7e7d7dc4" },
+  { name: "차요한", url: "../../차요한/html/index.html", color: "#ffbbbb" },
+  { name: "최규현", url: "../../최규현/html/index.html", color: "#b6a6e9" }
 ];
 
 const marbleArea = document.getElementById("marbleArea");

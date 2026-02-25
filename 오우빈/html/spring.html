@@ -1,0 +1,115 @@
+<!doctype html>
+<html lang="ko">
+
+<head>
+    <meta charset="utf-8" />
+    <title>1분기 활동</title>
+    <!--외부 스타일 시트 연결하기 (season.css 파일)-->
+    <link rel="stylesheet" href="../css/season.css">
+
+    <style>
+        section div img {
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <a href="./index.html">← 내 페이지로</a>
+        <h1>1분기 활동</h1>
+        <p>1분기에 진행한 활동 사진을 모아봤어요.</p> <!--내용 자유롭게 바꿔도 됩니다-->
+    </header>
+
+    <main>
+        <section>
+            <div>
+                <img src="../images/봄1.jpg" alt="캠프 단체사진" class="gallery-img"> <!--alt는 사진 설명 (화면에는 안 보임)-->
+                <p>첫 2박 3일 캠프</p> <!--사진 한 줄 설명-->
+            </div>
+
+            <div>
+                <img src="../images/봄2.jpg" alt="유주랑" class="gallery-img">
+                <p>정윤쌤이 찍어주신 유주와 투샷</p>
+            </div>
+
+            <div>
+                <img src="../images/봄3.jpg" alt="졸업식 단체" class="gallery-img">
+                <p>졸업식! 재밌었다</p>
+            </div>
+
+            <div>
+                <img src="../images/봄4.jpg" alt="캠프 충격 완화 체험" class="gallery-img">
+                <p>캠프에서 한 체험</p>
+            </div>
+
+            <div>
+                <img src="../images/봄5.jpg" alt="종이 비행기" class="gallery-img">
+                <p>종이 비행기 만들기</p>
+            </div>
+
+            <div>
+                <img src="../images/봄6.jpg" alt="코딩" class="gallery-img">
+                <p>열심히 배우고 있다</p>
+            </div>
+
+            <div>
+                <img src="../images/봄7.jpg" alt="이름 빙고" class="gallery-img">
+                <p>늘 하는 이름 빙고</p>
+            </div>
+
+            <div>
+                <img src="../images/봄8.jpg" alt="빙고2" class="gallery-img">
+                <p>이름 빙고2</p>
+            </div>
+
+            <div>
+                <img src="../images/봄9.jpg" alt="고기" class="gallery-img">
+                <p>삼겹살 맛있었다..</p>
+            </div>
+
+            <div>
+                <img src="../images/봄10.jpg" alt="난타" class="gallery-img">
+                <p>재밌다</p>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <a href="../../통합/html/home.html">반 전체 페이지로</a>
+    </footer>
+
+    <div id="imageModal" class="modal">
+        <span class="close">&times;</span>
+        <img class="modal-content" id="fullImage">
+    </div>
+
+    <script>
+        const modal = document.getElementById('imageModal');
+        const modalImg = document.getElementById('fullImage');
+        const closeBtn = document.getElementsByClassName("close")[0];
+
+        const images = document.querySelectorAll('.gallery-img');
+
+        images.forEach(img => {
+            img.addEventListener('click', function () {
+                modal.style.display = "flex";
+                modalImg.src = this.src;
+            });
+        });
+
+        closeBtn.onclick = function () {
+            modal.style.display = "none";
+        }
+
+        modal.onclick = function (event) {
+            if (event.target === modal) {
+                modal.style.display = "none";
+            }
+        }
+    </script>
+
+</body>
+
+</html>

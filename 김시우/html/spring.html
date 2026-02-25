@@ -1,0 +1,92 @@
+<!doctype html>
+<html lang="ko">
+
+<head>
+    <meta charset="utf-8" />
+    <title>1분기 활동</title>
+    <!--외부 스타일 시트 연결하기 (season.css 파일)-->
+    <link rel="stylesheet" href="../css/season.css">
+    <style>
+        section div img {
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <a href="./index.html">← 내 페이지로</a>
+        <h1>1분기 활동</h1>
+        <p>1분기에 진행한 활동 사진을 모아봤어요.</p>  <!--내용 자유롭게 바꿔도 됩니다-->
+    </header>
+
+    <main>
+        <section>
+            <div>
+                <img src="../images/67!!!!!!.jpg" alt="흑화해버린 자" class="gallery-img"> <!--alt는 사진 설명 (화면에는 안 보임)-->
+                <p>EHHH! SIX SEVEN!!!!</p> <!--사진 한 줄 설명-->
+            </div>
+
+            <div>
+                <img src="../images/손 아파.jpg" alt="난타를 쳐서 손이 아파진 썰" class="gallery-img">
+                <p>하도하도 많이 쳐대서 손에 굳은살 많이 생겼음 ㅠㅠ</p>
+            
+            </div>
+
+            <div>
+                <img src="../images/흑역사 제조기.jpg" alt="절대 열어보지 마시오 오글거려요" class="gallery-img">
+                <p>하... 오늘도 내 오른손에선 흑염룡이 잠들어있다...</p>
+            </div>
+
+            <div>
+                <img src="../images/내가 베트남에 있었을 때 센터.jpg" alt="내가 없을 때 센터 상황" class="gallery-img">
+                <p>아니 나 빼고 센터에서 뭘 한거야 ㅠㅠㅠㅠㅠ</p>
+            </div>
+
+            <div>
+                <img src="../images/적마의 기운을 전하리....jpg" alt="4명의 형들 졸업하는 날" class="gallery-img">
+                <p>이 형들의 고등학교 생활은 올해의 붉은 말이 잘 달려주길!</p>
+            </div>
+
+
+        </section>
+    </main>
+
+    <footer>
+        <a href="../../통합/html/home.html">반 전체 페이지로</a>
+    </footer>
+
+    <div id="imageModal" class="modal">
+        <span class="close">&times;</span>
+        <img class="modal-content" id="fullImage">
+    </div>
+
+    <script>
+        const modal = document.getElementById('imageModal');
+        const modalImg = document.getElementById('fullImage');
+        const closeBtn = document.getElementsByClassName("close")[0];
+        
+        const images = document.querySelectorAll('.gallery-img');
+
+        images.forEach(img => {
+            img.addEventListener('click', function() {
+                modal.style.display = "flex";
+                modalImg.src = this.src;
+            });
+        });
+
+        closeBtn.onclick = function() {
+            modal.style.display = "none";
+        }
+
+        modal.onclick = function(event) {
+            if (event.target === modal) {
+                modal.style.display = "none";
+            }
+        }
+    </script>
+
+</body>
+
+</html>

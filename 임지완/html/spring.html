@@ -1,0 +1,114 @@
+<!doctype html>
+<html lang="ko">
+
+<head>
+    <meta charset="utf-8" />
+    <title>1 분기</title>
+    <!--외부 스타일 시트 연결하기 (season.css 파일)-->
+    <link rel = "stylesheet" href="../css/season.css">
+    <style>
+        section div img {
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <a href="./index.html">← 내 페이지로</a>
+        <h1>1 분기</h1>
+        <p>봄에 진행한 활동 사진을 모아봤어요.</p>  <!--내용 자유롭게 바꿔도 됩니다-->
+    </header>
+
+    <main>
+        <section>
+            <div>
+                <img src="../images/봄1.jpg"  alt="활동 사진 1" class="gallery-img"> <!--alt는 사진 설명 (화면에는 안 보임)-->
+                <p>조선시대 노비를 타고있는 나</p>
+            </div>
+                
+            <div>
+                <img src="../images/봄2.jpg" alt="활동 사진 2" class="gallery-img">
+                <p>얼차렷 당하는 규현앙 </p>
+            </div>
+
+            <div>
+                <img src="../images/봄3.jpg" alt="활동 사진 3" class="gallery-img">
+                <p>차요한 표정 보소<br>(티라노 사우르스)</p>
+            </div>
+            
+            <div>
+                <img src="../images/봄4.jpg" alt="활동 사진 3" class="gallery-img">
+                <p>규현앙의 따뜻한 어부바</p>
+            </div>
+
+            <div>
+                <img src="../images/봄5.jpg" alt="활동 사진 3" class="gallery-img">
+                <p>시그마보이 규현앙</p>
+            </div>
+
+            <div>
+                <img src="../images/봄6.jpg" alt="활동 사진 3" class="gallery-img">
+                <p>산울림의 시그마 보이</p>
+            </div>
+
+            <div>
+                <img src="../images/봄7.jpg" alt="활동 사진 3" class="gallery-img">
+                <p>내 목표는 세계정복</p>
+            </div>
+
+            <div>
+                <img src="../images/봄8.jpg" alt="활동 사진 3" class="gallery-img">
+                <p>허벅지 겁나큰 주원이</p>
+            </div>
+
+            <div>
+                <img src="../images/봄11.jpg" alt="활동 사진 3" class="gallery-img">
+                <p>머리넘기기 달인 동유</p>
+            </div>
+
+            <div>
+                <img src="../images/봄10.jpg" alt="활동 사진 3" class="gallery-img">
+                <p>새해복 많이 받으 십쇼^^</p>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <a href="../../통합/html/home.html">반 전체 페이지로</a>
+    </footer>
+
+    <div id="imageModal" class="modal">
+        <span class="close">&times;</span>
+        <img class="modal-content" id="fullImage">
+    </div>
+
+    <script>
+        const modal = document.getElementById('imageModal');
+        const modalImg = document.getElementById('fullImage');
+        const closeBtn = document.getElementsByClassName("close")[0];
+        
+        const images = document.querySelectorAll('.gallery-img');
+
+        images.forEach(img => {
+            img.addEventListener('click', function() {
+                modal.style.display = "flex";
+                modalImg.src = this.src;
+            });
+        });
+
+        closeBtn.onclick = function() {
+            modal.style.display = "none";
+        }
+
+        modal.onclick = function(event) {
+            if (event.target === modal) {
+                modal.style.display = "none";
+            }
+        }
+    </script>
+
+</body>
+
+</html>
