@@ -3,7 +3,7 @@ const students = [
   { name: "김시우", url: "../../김시우/html/index.html", color: "#ff00ae" },
   { name: "김요한", url: "#", color: "#fbc2eb" },
   { name: "김은률", url: "../../김은률/html/spring.html", color: "#7c14e4" },
-  { name: "김정건", url: "#", color: "#ffecd2" },
+  { name: "김정건", url: "../../김정건/html/index.html", color: "#ffecd2" },
   { name: "김준서", url: "../../김준서/html/index.html", color: "#2de3ff" },
   { name: "박지원", url: "#", color: "#b6a6e9" },
   { name: "오우빈", url: "../../오우빈/html/index.html", color: "#6aa6e6" },
