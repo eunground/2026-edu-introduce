@@ -1,9 +1,5 @@
 const students = [
   // name: 학생 이름, url: 경로, color: 구슬 색상
-  { name: "신정은", url: "../../신정은/html/index.html", color: "#ff9a9e" },
-  { name: "홍길동", url: "../../홍길동/html/index.html", color: "#a18cd1" },
-  { name: "완성본", url: "../../완성본/html/index.html", color: "#fad0c4" },
-  // 데이터 더미 (학생들 추가)
   { name: "김시우", url: "../../김시우/html/index.html", color: "#ff00ae" },
   { name: "김요한", url: "#", color: "#fbc2eb" },
   { name: "김은률", url: "../../김은률/html/spring.html", color: "#7c14e4" },

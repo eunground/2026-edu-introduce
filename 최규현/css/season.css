@@ -1,21 +1,21 @@
 /* 1. 기본 설정 */
 body {
   margin: 0;
-  background-color: #505050; /* 전체 배경색 */
-  font-family: serif; /* 'Malgun Gothic'  sans-serif  serif 중 선택 */
+  background-color: #000; /* 전체 배경색 */
+  font-family: sans-serif; /* 'Malgun Gothic'  sans-serif  serif 중 선택 */
   text-align: center; /* 전체 글자를 가운데 정렬 */
 }
 
 /* 2-1. 헤더 꾸미기 */
 header {
-  background-color: #000000; /* 헤더 배경색 */
-  color: #ffffff; /* 헤더 글꼴색 */
+  background-color: white; /* 헤더 배경색 */
+  color: black; /* 헤더 글꼴색 */
   padding: 30px;
 }
 
 /* 2-2. 헤더 꾸미기 (내 페이지로 부분) */
 header a {
-  color: #fff;   /* 글꼴색 */
+  color: white;   /* 글꼴색 */
   text-decoration: none;  /* 밑줄 없애기 */
   font-weight: bold;
 }
@@ -31,10 +31,10 @@ section {
 
 /* 4. 사진 카드 (div) 꾸미기 */
 section div {
-  background-color: #fff; /* 사진 배경색 */
+  background-color: white; /* 사진 배경색 */
   padding: 10px;
   width: 250px;          /* 카드의 너비 고정 */
-  border: 2px solid black; /* 테두리 설정 */
+  border: 2px solid gray; /* 테두리 설정 */
 }
 
 /* 4-2 사진 카드 확대 효과 (추가 사항) */
@@ -92,7 +92,7 @@ footer a {
 }
 
 .close:hover {
-  color: #000000; /* 헤더 배경색 (11번째 줄과 동일한 색상) */
+  color: white; /* 헤더 배경색 (11번째 줄과 동일한 색상) */
 }
 
 @keyframes zoom {

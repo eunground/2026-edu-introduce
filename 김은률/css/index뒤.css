@@ -1,8 +1,8 @@
 /* 메뉴 링크 스타일 */
 aside nav a {
   text-decoration: none ;    /* 밑줄 없애기 */
-  color: hsl(0, 90%, 48%);    /* 글자색 */
-  background-color: hsl(260, 94%, 48%);    /* 배경색 */
+  color: #df1f1f;    /* 글자색 */
+  background-color: #7c14e4;    /* 배경색 */
   padding: 10px;
 }
 
