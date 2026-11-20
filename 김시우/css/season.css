@@ -7,15 +7,15 @@ body {
 }
 /* 2-1. 헤더 꾸미기 */
 header {
-  background-color:#0c7ee8 ; /* 헤더 배경색 */
-  color:#ff0062 ; /* 헤더 글꼴색 */
+  background-color:#fc00b0 ; /* 헤더 배경색 */
+  color:#ffffff ; /* 헤더 글꼴색 */
   padding: 30px;
 }
 
 
 /* 2-2. 헤더 꾸미기 (내 페이지로 부분) */
 header a {
-  color:#000 ;   /* 글꼴색 */
+  color:#ffffff ;   /* 글꼴색 */
   text-decoration: none;  /* 밑줄 없애기 */
   font-weight: bold;
 }
@@ -31,7 +31,7 @@ section {
 
 /* 4. 사진 카드 (div) 꾸미기 */
 section div {
-  background-color: #f10ba5; /* 사진 배경색 */
+  background-color: #ff0000; /* 사진 배경색 */
   padding: 10px;
   width: 250px;          /* 카드의 너비 고정 */
   border: 2px solid #000; /* 테두리 설정 */
@@ -95,7 +95,7 @@ footer a {
 }
 
 .close:hover {
-  color: #ff0062; /* 헤더 배경색 (11번째 줄과 동일한 색상) */
+  color: #ffffff; /* 헤더 배경색 (11번째 줄과 동일한 색상) */
 }
 
 @keyframes zoom {

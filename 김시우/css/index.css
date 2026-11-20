@@ -23,7 +23,7 @@ header {
 /* 4. 왼쪽 사이드바 (내 정보) */
 aside {
   width: 200px;         /* 너비는 180px ~ 220px에서 자유롭게! */
-  background: #ff7474;  /* 해당 위치에 배경색을 설정해보기 */
+  background: #ff0000;  /* 해당 위치에 배경색을 설정해보기 */
   padding: 20px;        /* 박스 속성: 여백 설정 해보기 */
   text-align: center;   /* 해당 위치에 글자 가운데 정렬해보기 */
   border-radius: 10px;  /* 박스 모서리를 둥글게 하고 싶다면? 선택 사항 */
@@ -46,14 +46,14 @@ aside nav {
 /* 메뉴 링크 스타일 */
 aside nav a {
   text-decoration: none;    /* 밑줄 없애기 */
-  color: #e1f966;    /* 글자색 */
-  background-color: #002aff;    /* 배경색 */
+  color: #ffffff;    /* 글자색 */
+  background-color: #00000000;    /* 배경색 */
   padding: 10px;
 }
 
 /* 마우스 올렸을 때 색상 변경, 선택 사항 */
 aside nav a:hover {
-  background-color: #ff00a6;   /* 배경색 */
+  background-color: #ffffff   /* 배경색 */
   color: #ffffff;    /* 글자색 */
 }
 
@@ -64,7 +64,7 @@ main {
 
 /* 본문 박스들 공통 스타일 */
 section,article {
-  background: #002aff;   /* 자기소개 네모 상자 배경색 */
+  background: #aeafaf;   /* 자기소개 네모 상자 배경색 */
   padding: 20px;
   margin-bottom: 10px;    /* 박스들 사이 간격 */
   border-radius: 20px;    /* 박스 둥글게 */
